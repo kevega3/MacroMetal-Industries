@@ -1,33 +1,53 @@
-# Getting Started with Create React App
+# MacroMetal Industries - Análisis de Producción
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicación web para la exploración de escenarios de producción utilizando funciones matemáticas simbólicas.
 
-## Available Scripts
+## Características
 
-In the project directory, you can run:
+- Ingreso de fórmulas de costo marginal e ingreso marginal
+- Cálculo automático de antiderivadas (funciones de costo total e ingreso total)
+- Visualización en tiempo real de fórmulas matemáticas usando MathJax
+- Selección de intervalo de producción usando slider
+- Cálculo de costos totales, ingresos totales y utilidad
+- Determinación del punto óptimo de producción
+- Gráficos interactivos de costo, ingreso y utilidad
+- Exportación de datos a Excel
 
-### `npm start`
+## Uso
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Ingresa una función de costo marginal (ej: `2*x + 50`)
+2. Ingresa una función de ingreso marginal (ej: `100*e^(-0.01*x)`)
+3. Ajusta el rango de producción con el slider
+4. Establece los costos fijos
+5. Visualiza los resultados y gráficos
+6. Exporta los datos si los necesitas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Ejemplos de funciones
 
-### `npm test`
+**Costo Marginal:**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Lineal: `2*x + 50`
+- Exponencial: `30*e^(0.005*x)`
+- Cuadrática: `0.01*x^2 + 10`
 
-### `npm run build`
+**Ingreso Marginal:**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Lineal decreciente: `200 - 0.1*x`
+- Exponencial decreciente: `100*e^(-0.01*x)`
+- Logarítmica: `1000/x + 10`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Tecnologías utilizadas
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- React.js
+- Material UI (MUI)
+- MathJax
+- Math.js
+- Chart.js
+- SheetJS (xlsx)
+
+---
+
+Creado para MacroMetal Industries © 2025
 
 ### `npm run eject`
 
