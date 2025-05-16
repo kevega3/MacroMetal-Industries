@@ -39,7 +39,7 @@ const ChartsPanel = ({
         sx={{
           p: 2,
           mb: 2,
-          height: "400px",
+          height: "700px", // Increased height further
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
@@ -55,6 +55,7 @@ const ChartsPanel = ({
   // Prepare data for Chart.js
   const chartOptions = {
     responsive: true,
+    maintainAspectRatio: false, // Important: allows chart to fill the container
     interaction: {
       mode: "index",
       intersect: false,
@@ -224,11 +225,26 @@ const ChartsPanel = ({
   }
 
   return (
-    <Paper elevation={3} sx={{ p: 2, mb: 2 }}>
-      <Typography variant="h6" gutterBottom>
+    <Paper
+      elevation={3}
+      sx={{
+        p: 3, // Increased padding
+        mb: 3, // Increased margin bottom
+        width: "100%", // Ensure full width
+      }}
+    >
+      <Typography variant="h5" gutterBottom>
         Gráficos de Análisis
       </Typography>
-      <Box sx={{ height: 400, width: "100%" }}>
+      <Box
+        sx={{
+          height: 700, // Increased height further
+          width: "100%",
+          maxWidth: "100%", // Ensure it doesn't exceed container width
+          margin: "0 auto", // Center the chart
+          position: "relative", // For proper sizing
+        }}
+      >
         <Line options={chartOptions} data={chartData} />
       </Box>
     </Paper>

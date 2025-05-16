@@ -339,11 +339,12 @@ function App() {
         </Toolbar>
       </AppBar>
       <Box sx={{ bgcolor: "#f5f8fa", minHeight: "100vh", py: 3 }}>
-        <Container maxWidth="lg">
+        <Container maxWidth="xl">
+          {" "}
+          {/* Changed from "lg" to "xl" for more width */}
           <Typography variant="h4" sx={{ mb: 4, color: "#424242" }}>
             Análisis de Escenarios de Producción
           </Typography>
-
           <Grid container spacing={3}>
             <Grid item xs={12} md={6}>
               <FormulaInput
